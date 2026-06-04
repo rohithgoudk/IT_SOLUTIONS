@@ -1,0 +1,127 @@
+/* HEADER */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: all 0.4s ease;
+    background: transparent;
+  }
+  
+  /* STICKY HEADER */
+  
+  .header.sticky {
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    padding: 12px 8%;
+  }
+  
+  /* LOGO */
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .logo-img {
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+    transition: 0.3s ease;
+  }
+  
+  .logo-img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* NAVIGATION */
+  
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+  }
+  
+  nav a {
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+  }
+  
+  /* HOVER EFFECT */
+  
+  nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #3b82f6;
+    transition: 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #3b82f6;
+  }
+  
+  nav a:hover::after {
+    width: 100%;
+  }
+  
+  /* RESPONSIVE */
+  
+  @media (max-width: 992px) {
+    .header {
+      padding: 15px 5%;
+    }
+  
+    .header.sticky {
+      padding: 12px 5%;
+    }
+  
+    .logo-img {
+      width: 150px;
+    }
+  
+    nav {
+      gap: 20px;
+    }
+  
+    nav a {
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    nav {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+  
+    .logo-img {
+      width: 140px;
+    }
+  }
