@@ -2,40 +2,37 @@ import "./Home.css";
 import IT1 from "../../assets/IT1.webp";
 import IT2 from "../../assets/IT2.webp";
 import IT3 from "../../assets/IT3.webp";
-import IT4 from "../../assets/IT4.webp";
+import IT11 from "../../assets/IT11.webp";
+import IT5 from "../../assets/IT5.webp";
+import IT10 from "../../assets/IT10.webp";
 
 function Home() {
   return (
     <>
       {/* HERO SECTION */}
       <section className="hero">
-        <div className="hero-content">
-          <span className="hero-tag">Innovative IT Solutions</span>
+  <div className="hero-overlay">
+    <div className="hero-content">
+      
 
-          <h1>
-            Empowering Businesses Through
-            <span> Digital Transformation</span>
-          </h1>
+      <h1>
+        Empowering Businesses Through
+        <span> Digital Transformation</span>
+      </h1>
 
-          <p>
-            We deliver cutting-edge software development, cloud solutions,
-            cybersecurity, and IT consulting services to help businesses grow
-            faster and smarter.
-          </p>
+      <p>
+        We deliver cutting-edge software development, cloud solutions,
+        cybersecurity, and IT consulting services to help businesses grow
+        faster and smarter.
+      </p>
 
-          <div className="hero-buttons">
-            <button className="primary-btn">Get Started</button>
-            <button className="secondary-btn">Learn More</button>
-          </div>
-        </div>
-
-        <div className="hero-image">
-          <img
-            src="https://images.unsplash.com/photo-1552664730-d307ca884978"
-            alt="IT Solutions"
-          />
-        </div>
-      </section>
+      <div className="hero-buttons">
+        <button className="primary-btn">Get Started</button>
+        <button className="secondary-btn">Learn More</button>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* SERVICES */}
 <section className="services">
@@ -88,7 +85,7 @@ function Home() {
     </div>
 
     <div className="service-card">
-      <img src={IT4} alt="IT Consulting" />
+      <img src={IT11} alt="IT Consulting" />
 
       <div className="service-content">
         <h3>IT Consulting</h3>
@@ -103,31 +100,29 @@ function Home() {
   </div>
 </section>
       {/* ABOUT */}
-      <section className="about">
-        <div className="about-image">
-          <img
-            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
-            alt="About"
-          />
-        </div>
+      <section
+  className="about"
+  style={{ backgroundImage: `url(${IT10})` }}
+>
+  <div className="about-overlay">
+    <div className="about-content">
+      <h2>Transforming Ideas Into Technology</h2>
 
-        <div className="about-content">
-          <h2>Transforming Ideas Into Technology</h2>
+      <p>
+        We are a team of passionate developers, designers, and IT experts
+        committed to delivering innovative solutions that drive business
+        success.
+      </p>
 
-          <p>
-            We are a team of passionate developers, designers, and IT experts
-            committed to delivering innovative solutions that drive business
-            success.
-          </p>
-
-          <ul>
-            <li>✔ Custom Software Development</li>
-            <li>✔ Enterprise IT Solutions</li>
-            <li>✔ Cloud & DevOps Services</li>
-            <li>✔ 24/7 Technical Support</li>
-          </ul>
-        </div>
-      </section>
+      <ul>
+        <li>✔ Custom Software Development</li>
+        <li>✔ Enterprise IT Solutions</li>
+        <li>✔ Cloud & DevOps Services</li>
+        <li>✔ 24/7 Technical Support</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
       {/* WHY CHOOSE US */}
       <section className="why-us">

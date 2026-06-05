@@ -4,6 +4,11 @@ import logo from "../../assets/stacklyimg1.webp";
 
 function Header() {
   const [sticky, setSticky] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,12 +36,25 @@ function Header() {
       </div>
 
       <nav>
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#solutions">Solutions</a>
-        <a href="#contact">Contact</a>
+
+      <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#solutions">Solutions</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
       </nav>
+
+      {/* Hamburger */}
+      <div
+  className={`hamburger ${menuOpen ? "active" : ""}`}
+  onClick={() => setMenuOpen(!menuOpen)}
+>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
 
     </header>
   );
